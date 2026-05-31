@@ -44,6 +44,10 @@ class DiseaseDatabase {
     ('🧅', 'Onion'),
     ('🌶️', 'Chilli'),
     ('🥜', 'Groundnut'),
+    ('🫘', 'Soybean'),
+    ('🌻', 'Mustard'),
+    ('🍌', 'Banana'),
+    ('🥭', 'Mango'),
   ];
 
   static List<LocalDisease> forCrop(String crop) =>
@@ -644,6 +648,230 @@ class DiseaseDatabase {
         'Remove volunteer groundnut plants from field edges',
       ],
       pesticide: 'Propiconazole 25% EC (Tilt) — 1mL/L water; 2–3 sprays at 15-day intervals',
+    ),
+
+    // ── SOYBEAN ───────────────────────────────────────────────────────────
+    LocalDisease(
+      crop: 'Soybean',
+      diseaseName: 'Yellow Mosaic Virus',
+      severity: 'High',
+      symptoms:
+          'Bright yellow patches alternating with green on leaves; mosaic pattern; stunted growth; shrivelled pods',
+      treatment: [
+        'Uproot and destroy infected plants immediately',
+        'Spray Thiamethoxam 0.4g/L to control whitefly vector',
+        'No chemical cure for the virus itself',
+      ],
+      prevention: [
+        'Use resistant varieties (JS-335, NRC-37)',
+        'Treat seed with Imidacloprid 70% WS at 5g/kg seed',
+        'Install yellow sticky traps; remove weed hosts',
+      ],
+      pesticide: 'Thiamethoxam 25% WG (Actara) — 0.4g/L for whitefly control',
+    ),
+    LocalDisease(
+      crop: 'Soybean',
+      diseaseName: 'Stem Fly',
+      severity: 'Medium',
+      symptoms:
+          'Wilting of seedlings; yellowing of cotyledonary leaves; maggots visible inside stem; dead heart symptom',
+      treatment: [
+        'Spray Dimethoate 30% EC at 2mL/L water at seedling stage',
+        'Apply Triazophos 40% EC at 2mL/L as alternative',
+        'Remove and destroy wilted seedlings',
+      ],
+      prevention: [
+        'Treat seed with Thiamethoxam 70% WS at 3g/kg seed',
+        'Early sowing (June 15–July 15) to avoid peak fly population',
+        'Avoid dense planting',
+      ],
+      pesticide: 'Dimethoate 30% EC — 2mL/L water; or Thiamethoxam 70% WS — 3g/kg seed treatment',
+    ),
+    LocalDisease(
+      crop: 'Soybean',
+      diseaseName: 'Pod Borer (Legume Pod Borer)',
+      severity: 'High',
+      symptoms:
+          'Circular holes on pods; caterpillars inside pods feeding on seeds; webbing on pods; shrivelled seeds',
+      treatment: [
+        'Spray Emamectin Benzoate 5% SG at 0.5g/L water at pod formation',
+        'Apply Chlorantraniliprole 18.5% SC at 0.4mL/L as alternative',
+        'Set up pheromone traps for monitoring',
+      ],
+      prevention: [
+        'Install pheromone traps (5/acre) from flowering stage',
+        'Intercrop with sorghum or maize as trap crop',
+        'Spray NSKE (Neem Seed Kernel Extract) 5% as early deterrent',
+      ],
+      pesticide: 'Emamectin Benzoate 5% SG (Proclaim) — 0.5g/L; or Chlorantraniliprole 18.5% SC — 0.4mL/L',
+    ),
+
+    // ── MUSTARD ───────────────────────────────────────────────────────────
+    LocalDisease(
+      crop: 'Mustard',
+      diseaseName: 'White Rust (Alternaria)',
+      severity: 'High',
+      symptoms:
+          'White blister-like pustules on leaves, stem and pods; distortion of pods; chalky white growth on infected parts',
+      treatment: [
+        'Spray Metalaxyl 8% + Mancozeb 64% WP at 2.5g/L water',
+        'Apply Ridomil Gold MZ at first sign of disease',
+        'Remove severely infected plant parts',
+      ],
+      prevention: [
+        'Use resistant varieties (Pusa Bold, Varuna)',
+        'Avoid dense sowing; maintain proper row spacing',
+        'Crop rotation with non-crucifer crops',
+      ],
+      pesticide: 'Metalaxyl 8% + Mancozeb 64% WP (Ridomil Gold MZ) — 2.5g/L water',
+    ),
+    LocalDisease(
+      crop: 'Mustard',
+      diseaseName: 'Alternaria Blight',
+      severity: 'Medium',
+      symptoms:
+          'Dark brown circular spots with concentric rings on leaves; spots on pods cause shrivelling; severe defoliation',
+      treatment: [
+        'Spray Mancozeb 75% WP at 2g/L water at first sign',
+        'Apply Iprodione 50% WP at 2g/L as alternative',
+        'Remove infected crop debris',
+      ],
+      prevention: [
+        'Seed treatment with Thiram 75% WP at 3g/kg seed',
+        'Crop rotation; avoid mustard after mustard',
+        'Balanced nutrition — avoid excess nitrogen',
+      ],
+      pesticide: 'Mancozeb 75% WP (Indofil M-45) — 2g/L water; spray every 10 days',
+    ),
+    LocalDisease(
+      crop: 'Mustard',
+      diseaseName: 'Aphids (Mustard Aphid)',
+      severity: 'High',
+      symptoms:
+          'Dense colonies of small greenish insects on growing tips, flowers and pods; honeydew and sooty mold; stunted growth',
+      treatment: [
+        'Spray Dimethoate 30% EC at 1.5mL/L water',
+        'Apply Imidacloprid 17.8% SL at 0.5mL/L as alternative',
+        'Spray during early morning when aphids are active',
+      ],
+      prevention: [
+        'Early sowing (October) to escape peak aphid season',
+        'Install yellow sticky traps for monitoring',
+        'Conserve natural enemies like ladybird beetles',
+      ],
+      pesticide: 'Dimethoate 30% EC — 1.5mL/L water; or Imidacloprid 17.8% SL — 0.5mL/L',
+    ),
+
+    // ── BANANA ────────────────────────────────────────────────────────────
+    LocalDisease(
+      crop: 'Banana',
+      diseaseName: 'Panama Wilt (Fusarium Wilt)',
+      severity: 'High',
+      symptoms:
+          'Yellowing of older outer leaves from margins inward; leaves collapse at petiole; brown discoloration inside pseudostem',
+      treatment: [
+        'Uproot and destroy infected plants — do not compost',
+        'Drench soil with Carbendazim 2g/L around nearby plants',
+        'No effective chemical cure — focus on prevention',
+      ],
+      prevention: [
+        'Use Fusarium-resistant varieties (Grand Naine, Robusta)',
+        'Use tissue culture planting material',
+        'Soil solarization before planting; avoid waterlogging',
+      ],
+      pesticide: 'Carbendazim 50% WP — 2g/L soil drench; Trichoderma viride 2.5kg/acre soil application',
+    ),
+    LocalDisease(
+      crop: 'Banana',
+      diseaseName: 'Sigatoka Leaf Spot',
+      severity: 'Medium',
+      symptoms:
+          'Pale yellow streaks on leaves turning brown with grey center and yellow halo; severe leaf death reduces yield',
+      treatment: [
+        'Spray Propiconazole 25% EC at 1mL/L water',
+        'Apply Mancozeb 75% WP at 2g/L as protectant spray',
+        'Remove and destroy severely infected leaves',
+      ],
+      prevention: [
+        'Remove old/dead leaves regularly',
+        'Ensure proper plant spacing for air circulation',
+        'Avoid overhead irrigation',
+      ],
+      pesticide: 'Propiconazole 25% EC (Tilt) — 1mL/L water; or Mancozeb 75% WP — 2g/L',
+    ),
+    LocalDisease(
+      crop: 'Banana',
+      diseaseName: 'Banana Bunchy Top Virus',
+      severity: 'High',
+      symptoms:
+          'Stunted new leaves; dark green streaks on leaf margins and midrib; leaves bunched at top; no fruit production',
+      treatment: [
+        'Uproot and destroy infected plants immediately',
+        'Apply kerosene into pseudostem before uprooting to kill the plant',
+        'Control aphid vector with Dimethoate 1.5mL/L spray',
+      ],
+      prevention: [
+        'Use virus-free tissue culture planting material only',
+        'Control banana aphid (Pentalonia nigronervosa) regularly',
+        'Remove and destroy infected suckers',
+      ],
+      pesticide: 'Dimethoate 30% EC — 1.5mL/L water for aphid vector control',
+    ),
+
+    // ── MANGO ─────────────────────────────────────────────────────────────
+    LocalDisease(
+      crop: 'Mango',
+      diseaseName: 'Anthracnose',
+      severity: 'High',
+      symptoms:
+          'Black irregular spots on leaves, flowers and fruits; flower and fruit drop; dark sunken lesions on ripe fruit',
+      treatment: [
+        'Spray Carbendazim 50% WP at 1g/L water at pre-flowering',
+        'Apply Copper Oxychloride 50% WP at 3g/L as alternative',
+        'Remove and destroy infected flowers and fruits',
+      ],
+      prevention: [
+        'Spray preventively before flowering and fruit set',
+        'Prune tree canopy for good air circulation',
+        'Collect and destroy fallen infected fruits',
+      ],
+      pesticide: 'Carbendazim 50% WP — 1g/L water; or Copper Oxychloride 50% WP — 3g/L; 3 sprays',
+    ),
+    LocalDisease(
+      crop: 'Mango',
+      diseaseName: 'Powdery Mildew',
+      severity: 'Medium',
+      symptoms:
+          'White powdery growth on young leaves, flowers and small fruits; flower drop; fruit set failure',
+      treatment: [
+        'Spray Wettable Sulfur 80% WP at 3g/L water at bud burst',
+        'Apply Hexaconazole 5% EC at 2mL/L as alternative',
+        'Repeat spray at 15-day intervals during flowering',
+      ],
+      prevention: [
+        'Prune dense canopy to improve air circulation',
+        'Apply preventive sulfur sprays before flowering',
+        'Avoid over-irrigation during flowering',
+      ],
+      pesticide: 'Wettable Sulfur 80% WP — 3g/L water; or Hexaconazole 5% EC — 2mL/L',
+    ),
+    LocalDisease(
+      crop: 'Mango',
+      diseaseName: 'Mango Malformation',
+      severity: 'Medium',
+      symptoms:
+          'Bunchy, vegetative shoots instead of normal flower panicles; small, tightly packed flowers; no fruit set',
+      treatment: [
+        'Prune and destroy malformed vegetative/floral shoots 15–30cm below infected part',
+        'Spray NAA (Naphthalene Acetic Acid) 200ppm after pruning',
+        'No complete cure — reduce inoculum by pruning',
+      ],
+      prevention: [
+        'Use certified disease-free grafted planting material',
+        'Spray Carbendazim 0.1% at bud break stage',
+        'Disinfect pruning tools with 1% sodium hypochlorite',
+      ],
+      pesticide: 'Carbendazim 50% WP — 1g/L water spray at bud break; NAA 200ppm post-pruning',
     ),
   ];
 }

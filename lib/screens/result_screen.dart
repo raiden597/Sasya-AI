@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../models/crop_result.dart';
 import '../services/history_service.dart';
 import '../services/translations.dart';
@@ -200,6 +201,8 @@ class _ResultScreenState extends State<ResultScreen> {
                   if (result.prevention.isNotEmpty) _buildPreventionCard(),
                   if (result.isHealthy) _buildHealthyCard(),
                   const SizedBox(height: 14),
+                  _buildKisanHelpline(),
+                  const SizedBox(height: 10),
                   _buildBackButton(context),
                 ],
               ),
@@ -406,6 +409,25 @@ class _ResultScreenState extends State<ResultScreen> {
           fontSize: 13,
           height: 1.6,
         ),
+      ),
+    );
+  }
+
+  Widget _buildKisanHelpline() {
+    return OutlinedButton.icon(
+      onPressed: () => launchUrl(
+        Uri.parse('tel:18001801551'),
+        mode: LaunchMode.externalApplication,
+      ),
+      icon: const Icon(Icons.phone, color: Color(0xFF4ADE80), size: 18),
+      label: const Text(
+        'Kisan Helpline — 1800-180-1551 (Free)',
+        style: TextStyle(color: Color(0xFF4ADE80), fontSize: 13),
+      ),
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(color: Color(0xFF2D6A4F)),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     );
   }

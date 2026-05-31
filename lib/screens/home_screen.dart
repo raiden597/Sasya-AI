@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String _t(String key) => AppTranslations.get(_lang, key);
 
   void _showLanguagePicker() {
-    final langs = AppTranslations.supportedLanguages;
+    const langs = AppTranslations.supportedLanguages;
     showModalBottomSheet(
       context: context,
       backgroundColor: const Color(0xFF1D3525),
